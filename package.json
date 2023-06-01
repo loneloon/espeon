@@ -1,10 +1,12 @@
 {
   "name": "espeon",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Simple codeword based encryption algorithm",
-  "main": "dist/index.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "repository": "https://github.com/loneloon/espeon.git",
-  "author": "loneloon <f.kleshev@gmail.com>",
+  "author": "loneloon <loon.creator@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "husky": "^8.0.0",
@@ -13,7 +15,14 @@
     "typescript": "^5.0.4"
   },
   "scripts": {
-    "prepare": "husky install",
-    "build": "tsc --build"
-  }
+    "prepare": "husky install && npm run build",
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc --module esnext --outDir dist/esm",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ]
 }
