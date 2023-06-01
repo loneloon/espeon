@@ -39,11 +39,9 @@ export class Espeon {
    * const hashedString = bcrypt.hash(sensitiveString, 10)
    * const doubleEncryptedString = encryptionService.encrypt(hashedString)
    * ```
-   *
    */
   private readonly base: string;
   private readonly delimiter: string;
-
   /**
    * @param {string}  encryptionKey - Espeon requires fairly small encryption keys to use as a base. A valid key should contain 11 unique characters.
    */
