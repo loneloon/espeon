@@ -1,6 +1,6 @@
 # Espeon
 
-🧤*Light keyword-based encryption algorithm.*🧤
+🧤 Light keyword-based encryption algorithm. 🧤
 
 ### Description
 
